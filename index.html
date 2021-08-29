@@ -4,6 +4,22 @@
 <p data-ke-size="size8">&nbsp;</p>
 <html lang="ko">
 <head>
+
+
+<script type="text/javascript">
+var userAgent = navigator.userAgent.toLowerCase(); // 접속 모바일 디바이스 정보
+  
+// 모바일 홈페이지 바로가기 링크 생성
+if(userAgent.match('iphone')) {
+    document.write('<link rel="apple-touch-icon" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOGyRj%2Fbtrdr4CAInR%2FqE4qTqPzlTpIxTakblMWV0%2Fimg.png" />')
+} else if(userAgent.match('ipad')) {
+    document.write('<link rel="apple-touch-icon" sizes="72*72" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOGyRj%2Fbtrdr4CAInR%2FqE4qTqPzlTpIxTakblMWV0%2Fimg.png" />')
+} else if(userAgent.match('android')) {
+    document.write('<link rel="shortcut icon" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FGDl5V%2FbtrdpLcZet3%2Fa5JroK8GCG6xkCH4vDpUy0%2Fimg.png" />')
+}
+</script>
+
+
   <title>방구해</title>  <!--탭제목-->
   <meta charset="utf-8">  <!--한글깨짐 방지-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--화면크기애따라 자동맞춤-->
@@ -31,20 +47,6 @@
 
 
   </style>
-
-<script type="text/javascript">
-var userAgent = navigator.userAgent.toLowerCase(); // 접속 모바일 디바이스 정보
-  
-// 모바일 홈페이지 바로가기 링크 생성
-if(userAgent.match('iphone')) {
-    document.write('<link rel="apple-touch-icon" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOGyRj%2Fbtrdr4CAInR%2FqE4qTqPzlTpIxTakblMWV0%2Fimg.png" />')
-} else if(userAgent.match('ipad')) {
-    document.write('<link rel="apple-touch-icon" sizes="72*72" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOGyRj%2Fbtrdr4CAInR%2FqE4qTqPzlTpIxTakblMWV0%2Fimg.png" />')
-} else if(userAgent.match('android')) {
-    document.write('<link rel="shortcut icon" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FGDl5V%2FbtrdpLcZet3%2Fa5JroK8GCG6xkCH4vDpUy0%2Fimg.png" />')
-}
-</script>
-
 
 
 
