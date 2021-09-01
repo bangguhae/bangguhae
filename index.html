@@ -24,6 +24,21 @@
 <meta name="msapplication-TileImage" content= "ms-icon-144x144.png" > 
 <meta name="theme-color"  content= "#ffffff" >
 
+<script type="text/javascript">
+var userAgent = navigator.userAgent.toLowerCase(); // 접속 모바일 디바이스 정보
+  
+// 모바일 홈페이지 바로가기 링크 생성
+if(userAgent.match('iphone')) {
+    document.write('<link rel="apple-touch-icon" href="apple-icon-114x114.png" />')
+} else if(userAgent.match('ipad')) {
+    document.write('<link rel="apple-touch-icon" sizes="72*72" href="apple-icon-72x72.png" />')
+} else if(userAgent.match('android')) {
+    document.write('<link rel="shortcut icon" href="android-icon-72x72.png" />')
+}
+</script>
+
+
+
 <meta property="og:url" content="https://bangguhae.co.kr/">
 <meta property="og:title" content="방구해">
 <meta property="og:type" content="website">
