@@ -5,6 +5,33 @@
 <html lang="ko">
 <head>
 
+<script type="text/javascript">
+		var omitformtags=["input", "textarea", "select"]
+		omitformtags=omitformtags.join("|")
+		function disableselect(e){
+		if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
+		return false
+		}
+		function reEnable(){
+		return true
+		}
+		if (typeof document.onselectstart!="undefined")
+		document.onselectstart=new Function ("return false")
+		else{
+		document.onmousedown=disableselect
+		document.onmouseup=reEnable
+		}
+	$(document).ready(function(){
+	  $(document).bind('keydown', function(e) {
+		if(e.keyCode == 123) {
+		  e.preventDefault();
+		  e.returnValue = false;
+		}
+	  });
+	});
+	</script>
+
+
 <link rel="shortcut icon" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbQqoqC%2FbtrdPJROenE%2FOVGYiU1QuRID81JSV6QKF0%2Fimg.png">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel= "apple-touch-icon"  sizes= "57x57"  href= "apple-icon-57x57.png" > 
@@ -106,7 +133,7 @@ background-color:#2C0000;
 
 
 
-
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
 <body>
 <div class="text-center bg-dark text-white"><br>
   <h1>방구해 아파트</h1>
@@ -123,7 +150,7 @@ background-color:#2C0000;
   <div class="row con_custom">
 
     <div class="col-sm-2">
-     <h5><span style="color:white">방구해 오시는 길</span></h5>
+     <h5><span style="color:white"><b>방구해 오시는 길</b></span></h5>
       <hr>
       <a href="https://blog.naver.com/bangguhae001/222535892513"target="_blank"><span style="color:#6495ED"><h6><b>서대문구 북가좌동 392-35 204호, </h6><h6><br> 방구해부동산중개 </b></h6></span></a><br><br>
       <a href='tel:010-4877-8114'><span style="color:#D9418C"></h6><h6><b>방문예약클릭 주차 가능 합니다.</b></h6> </span></a><br><br>
@@ -134,7 +161,7 @@ background-color:#2C0000;
     </div>
 
     <div class="col-sm-2">
-      <h5><span style="color:white">서대문구 아파트</span></h5>
+      <h5><span style="color:white"><b>서대문구 아파트</b></span></h5>
       <hr>
       <a href="https://sites.google.com/bangguhae.co.kr/shinilhappytree"target="_blank"><span style="color:red"><h6><b>♥북가좌동 신일해피트리(111세대/총2동/2005.10.31)♥</b></h6></span> </a><br>
       <a href="https://sites.google.com/bangguhae.co.kr/dmchegarden"target="_blank"><span style="color:#FFA500"><h6><b>♥북가좌동 이랜드해가든(99세대/총2동/2007.07.31)♥</b></h6></span> </a><br>
@@ -152,7 +179,7 @@ background-color:#2C0000;
     </div>
 
     <div class="col-sm-2">
-      <h5><span style="color:white">은평구 아파트</span></h5>
+      <h5><span style="color:white"><b>은평구 아파트</b></span></h5>
       <hr>
       <a href="https://sites.google.com/bangguhae.co.kr/dmcdeokwon"target="_blank"><span style="color:red"><h6><b>♥증산동 DMC덕원(84세대/총1동/1997.12.15)♥</b></h6></span> </a><br>
       <a href=" "target="_blank"><span style="color:#FFA500"><h6><b>♥수색동 DMC청구(196세대/총3동/2000.03.16)♥</b></h6></span> </a><br>
@@ -170,7 +197,7 @@ background-color:#2C0000;
     </div>
 
     <div class="col-sm-2">
-      <h5><span style="color:white">마포구 아파트</span></h5>
+      <h5><span style="color:white"><b>마포구 아파트</b></span></h5>
       <hr>
       <a href=" "target="_blank"><span style="color:red"><h6><b>♥중동 DMC마포청구(420세대/총4동/1994.09.29)♥</b></h6></span> </a><br>
       <a href=" "target="_blank"><span style="color:#FFA500"><b></b></span> </a><br>
@@ -188,7 +215,7 @@ background-color:#2C0000;
     </div>
 
 <div class="col-sm-2">
-      <h5><span style="color:white">용산구 아파트</span></h5>
+      <h5><span style="color:white"><b>용산구 아파트</b></span></h5>
       <hr>
       <a href=" "target="_blank"><span style="color:red"><b></b></span> </a><br>
       <a href=" "target="_blank"><span style="color:#FFA500"><b></b></span> </a><br>
@@ -206,7 +233,7 @@ background-color:#2C0000;
     </div>
 
 <div class="col-sm-2">
-      <h5><span style="color:white">종로구 아파트</span></h5>
+      <h5><span style="color:white"><b>종로구 아파트</b></span></h5>
       <hr>
       <a href=" "target="_blank"><span style="color:red"><b></b></span> </a><br>
       <a href=" "target="_blank"><span style="color:#FFA500"><b></b></span> </a><br>

@@ -5,6 +5,33 @@
 <html lang="ko">
 <head>
 
+<script type="text/javascript">
+		var omitformtags=["input", "textarea", "select"]
+		omitformtags=omitformtags.join("|")
+		function disableselect(e){
+		if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
+		return false
+		}
+		function reEnable(){
+		return true
+		}
+		if (typeof document.onselectstart!="undefined")
+		document.onselectstart=new Function ("return false")
+		else{
+		document.onmousedown=disableselect
+		document.onmouseup=reEnable
+		}
+	$(document).ready(function(){
+	  $(document).bind('keydown', function(e) {
+		if(e.keyCode == 123) {
+		  e.preventDefault();
+		  e.returnValue = false;
+		}
+	  });
+	});
+	</script>
+
+
 <link rel="shortcut icon" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbQqoqC%2FbtrdPJROenE%2FOVGYiU1QuRID81JSV6QKF0%2Fimg.png">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel= "apple-touch-icon"  sizes= "57x57"  href= "apple-icon-57x57.png" > 
@@ -106,7 +133,7 @@ background-color:#00003F;
 
 
 
-
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
 <body>
 <div class="text-center bg-dark text-white"><br>
   <h1>방구해 빌라</h1>
